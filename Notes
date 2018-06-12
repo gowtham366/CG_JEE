@@ -1,0 +1,272 @@
+$$$$$$$$$$$$$$$$$
+Day 1
+$$$$$$$$$$$$$$$$$
+
+
+Java8(Spider) - Middle level
+*****
+Project green --> OAK(code name) --> Java
+
+-Security
+Algo - sand box model
+
+WORA - Write Once Run Anywhere
+****
+
+EXTENSION
+*********
+.java
+.class
+
+Architecture
+*************
+-Class loader
+-Byte code verifier
+-Security manager
+
+
+package com.cg;
+
+public class Program1 {
+
+//	public static void main(String[] java) 
+//	public static void main(String java[]) 
+//	public static void main(String ... java) 
+//	static public void main(String ... java) 
+
+Primitive data type
+********************
+	Integer -  0
+	byte - 1 byte
+	short - 2 bytes
+	int - 4 bytes
+	long - 8 bytes
+	
+Floating Point - 0.0
+	float - 4 bytes (suffixed by 'f')
+	double - 8 bytes
+
+Boolean - false
+	boolean - 1bit (true/false)
+	
+Character - '\u0000'
+	char - 2 bytes
+	
+Variable
+********
+
+Global - instance & static (Heap memory)
+Local - Stack
+Reference - 
+
+
+String + any = String
+
+*Local variable value must be initialized else leads to complier error*
+
+Casting 
+********
+
+Selection statement
+*******************
+if(true/false)
+
+Switch - int,char,enum,String(from java 7)
+
+Looping statement
+*****************
+Loop runs upto the datatype size if it is infinite
+
+while(var<10); --> infinite loop
+
+for(;;) --> Perfect infinite loop
+
+
+$$$$$$$$$$$$$$$$
+Day 2
+$$$$$$$$$$$$$$$$
+
+Object creation --> instantiation [in heap mem]
+new keyword allocates memory
+
+ClassName var = new ClassName();
+new ClassName();//anonymous object
+ClassName var;//Reference or obj variable - default value = null
+
+Return type is void it will not print in print statement
+
+
+
+
+
+$$$$$$$$$$$$$$$
+Day 3
+$$$$$$$$$$$$$$$
+
+
+Encapsulation (Archived by Objects)
+***************
+	1.Hiding up of data
+	2.Binding of data and behaviour as single unit
+	
+	Coding implementation
+	*********************
+	1.private variables
+	2.public getters and setters
+	
+ReadOnly variables
+R/W variables
+constant variables by final
+
+Abstraction
+***********
+	1.Essential
+	2.Hiding of data
+	
+Access Modifiers
+*****************
+	Private - low, 
+	Default(pkg private) - no need to specify
+	Protected -
+	Public - high,
+
+Packages
+*********
+Inter related classes and interfaces
+
+Static modifier
+***************
+Used for 
+	-variables 
+	-methods	
+static variable are mostly related to classes
+
+Abstraction
+************
+	1.Extracting the data which we need
+	2.Accessing 
+	
+Constructor
+***********
+	-Only public, private & protected are permitted
+	-static is not permitted
+	
+Class Libraries
+***************
+Scanner class, useDelimiter("");
+
+String - implementation of CharSequence
+******
+	-sequence of char
+	-is final class
+	-17 constructors
+	-immutable objects
+	-literals
+	-can be created as object
+	-String pool(Heap memory)
+	
+	Methods
+	********
+		-length(),indexOf()...
+		
+Inheritance
+************
+private methods & var cannot be inherited
+static method & var cannot be inherited - If inherited it is said to be method 
+
+
+Object :  By default any java prgrm we write the base will java.lang.Object
+********                                                   ****************
+
+	-equals
+	-hashCode()
+	-toString()
+	-wait, notify, notifyAll()
+
+Every Java program will have default class c
+	
+$$$$$$$$$$$
+Day 4
+$$$$$$$$$$$
+
+Object class
+	-equals
+	-toString()
+	-hashCode()
+
+Constructor Invocation
+-------------------------
+ -super() is defined in the 
+ 
+ 
+ 
+ By using constructor assign the value/assign using sub class constructor
+
+Multilevel Inheritance (Base class -->Sub class -->Sub class)
+-------------
+ob=e;//base
+e=ad;//sub//base
+ob=ad;//sub
+Upward casting(implicit casting)
+----------------
+
+Variable without new keyword is called as Reference variable
+										  -------------------
+										  -Employee emp = null;
+		
+Downward casting (explicit casting)
+----------------
+Employee emp = null;//base 
+emp = new Manager()
+if(emp instanceof Manager){//statement
+Manager manager = (Manager)emp;
+}
+
+Polymorphism - Many forms
+*************
+	1.variable - varargs (String...args)
+	2.method - overloading 
+				No. of args, 
+				Change in Data type,
+				Order of Data type
+				
+	3.constructor - overloading
+	4.object - overriding
+
+	-Static (Compile time)
+		implemented by overloading
+	-Dynamic (Runtime)
+		implemented by Overriding
+		
+	
+	Overriding happens btw Parent & child class
+	Overloading always happens btw the same class -arg list()
+		
+	for(:) -> Will throw the null pointer exception if null value is passed
+	
+final variable
+****************
+
+	final float PI=3.14f; --> value cannot be change
+	
+	final class
+	***********
+		-cannot be inherited
+	final method
+	************
+		-cannot be overrided
+		
+Abstraction:
+*************
+	abstract class - 50%
+	Interface - 100%
+	
+	
+Interface static method & default can have method defination from java 8
+-----------
+	Name Prefixed with I
+	-Variable must be initialized -->By default var will be--> public static final
+	-Method is always abstract --> public abstract void display();
+	- Any abstract method in the interface must be override in the class which is implementing interface
+	- interface cannot be instantiated(cannot create the object)
+	
