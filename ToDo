@@ -1,0 +1,52 @@
+Employee
+	Admin
+		SrAdmin
+		JrAdmin
+	Manager
+		JrManager
+		SrManager
+
+***********************
+Vehicle class
+
+nNo argument const
+private int regNo,
+private String vehName;
+toString() - override
+
+
+
+Employee
+	int rId;
+	String empName;
+
+	Admin
+		String role;
+	Manager
+		String data;
+	
+Lady -work()
+	Employee - work()
+	HomeMaker - work()
+	Member - work()
+
+************************	
+Object ob;
+String s=null;
+ob=s;
+String s1="hello";
+ob=s1;
+sop(ob);
+
+Should I type cast ob to string to get String data
+	
+Employee, manager, admin
+When I create an object of manager / admin based on number of object created ,
+prgrm should print o/p as 
+"no of employees :"2
+
+*************************
+
+Notepad -interface
+OS -implementation
+Client -trigger
