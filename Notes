@@ -270,3 +270,149 @@ Interface static method & default can have method defination from java 8
 	- Any abstract method in the interface must be override in the class which is implementing interface
 	- interface cannot be instantiated(cannot create the object)
 	
+$$$$$$$$$$
+Day 5
+$$$$$$$$$$
+
+Abstract class
+***************
+	-Abstract class may or may not have abstract method
+	-Abstract method do not have body
+	-Sub class must Override all the abstract method in the base class
+	-class cannot be static
+	-constructor cannot be created
+	-can have concrete methods & abstract method
+	-When abstract class is inherited by sub class
+		-->Override all the methods
+			or
+		-->make the sub class as abstract
+		
+$$$$$$$$$
+Day 6
+$$$$$$$$$
+
+Arrays - class
+*******
+	Disadvantages in Array:
+		- Size is fixed 
+		- insertion & deletion
+		- similar data
+		- Memory leakage or wastage
+		
+		
+-->has a relationship(Aggregation) - Independent (Customer & address)
+has a relationship(Composition) - dependent (Book & Pages) -- MPT
+
+class sample{
+//aggregation
+psvm
+{
+//composition
+}
+}
+
+Collection framework: Data structure
+*********************
+	Collections: class
+	Collection: Interface 
+		-do not allow datatype
+
+		List - Interface --> 
+							1.Allows duplication of objects(Elements)
+							2.Insertion order - natural order
+			
+			-ArrayList - similar to array - Growable Array
+				- Searching
+			-LinkedList - Do not have sequential memory space (connected by address)
+				- Insert or delete
+			
+			list.add(10);\\Auto-Boxing \\ new Integer(10)- Boxing -->Wrapper class
+			s.o.p(list)\\Auto-Unboxing \\ list.intValue() - Unboxing
+			
+			
+			-Vector --> Synchronized
+		
+		Set - Interface -->
+						1.Doesn't allow duplication & null value
+						2.Unordered
+						3.Don't have get method 
+		
+			-HashSet
+			-LinkedHashSet
+			-SortedSet(interface) ---> TreeSet
+				-will not allow null value
+			
+		Map --> Map interface not collection interface
+		
+			-HashMap
+				-Allow null key
+			-HashTable
+				-synchronized
+				-cannot have null key and value
+			-SortedMap --->TreeMap
+			-Properties
+			
+			
+		Queue, Dequeue, ArrayDeque, PriorityQueue
+		
+		Iterator --> interface
+			-used to iterate and remove the element
+			
+			-next() --> retrive the element
+			-hasNext() -->boolean
+			-remove()
+			
+			Iterator it=list.iterator();
+			while(it.hasNext()){
+				////it.remove();  //illegal statement exception
+				s.o.p(it.next());
+				it.remove();
+			}
+			
+		forEach
+		
+	Generics --> Type safety
+	
+	
+	The wildcard ? is used to indicate any type. There are two variations in using
+	wildcard.
+	? super T: indicates lower bound meaning, any reference types which are
+	superclass of T are allowed.
+	? extends T: indicated upper bound meaning, any reference types which are
+	subclass of T are allowed.
+	
+	
+Exception:
+***********
+
+Program :
+
+	java.lang.Throwable
+		-Error
+		
+		-Exception
+			1.Checked
+			2.Unchecked
+
+Layered Arch:
+*************
+	Presentation - Presentation code --Main
+	Service - Business logic + Validation
+	Dao - Database coding(jdbc) IQuery interface + DbUtil (creation jdbc connection)
+	
+	jdbc.properties - uname,pwd,driver,url
+	
+	junit
+	log4j
+	
+	
+	com.emp.ui - main
+	com.emp.service - interface,class
+	com.emp.dao - interface,class
+	com.emp.util class with one static method + interface(iQuery)
+	com.emp.exception - userdefined exception
+	com.emp.bean - bean(Domain object)
+	com.emp.test - junit test case
+	
+	resources - log4j.prop, jdbc.prop
+	lib - ojdbc.jar, log4j.jar, etc
