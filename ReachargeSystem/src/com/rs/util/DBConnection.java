@@ -16,6 +16,10 @@ import com.rs.exception.RechargeSystemException;
 
 import oracle.jdbc.pool.OracleDataSource;
 
+/**
+ * @author gowthc
+ *
+ */
 public class DBConnection {
 	
 	private static Properties properties= new Properties();
