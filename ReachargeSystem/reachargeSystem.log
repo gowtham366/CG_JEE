@@ -1,0 +1,53 @@
+2018-06-16-main-ERROR-root      :ORA-12899: value too large for column "TRG1130"."RECHARGE_HISTORY"."EMAIL" (actual: 24, maximum: 20)
+
+2018-06-16-main-ERROR-root      :Invalid column index
+2018-06-16-main-ERROR-root      :Invalid column index
+2018-06-16-main-ERROR-root      :Invalid column index
+2018-06-16-main-ERROR-root      :Insertion failed 
+2018-06-16-main-INFO -root      :Record Not Found
+2018-06-16-main-INFO -root      :Record Found Successfully
+2018-06-16-main-INFO -root      :Record Found Successfully
+2018-06-16-main-INFO -root      :Record Found Successfully
+2018-06-16-main-ERROR-root      :Insertion failed 
+2018-06-16-main-ERROR-root      :Insertion failed 
+2018-06-16-main-INFO -root      :Record Found Successfully
+2018-06-16-main-INFO -root      :Record Found Successfully
+2018-06-16-main-INFO -root      :Record Found Successfully
+2018-06-16-main-ERROR-root      :Insertion failed 
+2018-06-16-main-ERROR-root      :Invalid column index
+2018-06-16-main-INFO -root      :Reacharge details added successfully:
+2018-06-18-main-INFO -root      :Reacharge details added successfully:
+2018-06-18-main-INFO -root      :Reacharge details added successfully:
+2018-06-18-main-INFO -root      :Reacharge details added successfully:
+2018-06-18-main-INFO -root      :Reacharge details added successfully:
+2018-06-18-main-INFO -root      :Reacharge details added successfully:
+2018-06-18-main-INFO -root      :Reacharge details added successfully:
+2018-06-18-main-INFO -root      :Reacharge details added successfully:
+2018-06-18-main-INFO -root      :Record Found Successfully
+2018-06-18-main-INFO -root      :Record Found Successfully
+2018-06-18-main-INFO -root      :Record Not Found
+2018-06-18-main-INFO -root      :Record Found Successfully
+2018-06-18-main-INFO -root      :Record Found Successfully
+2018-06-18-main-ERROR-root      :ORA-12899: value too large for column "TRG1130"."RECHARGE_HISTORY"."EMAIL" (actual: 23, maximum: 20)
+
+2018-06-18-main-INFO -root      :Reacharge details added successfully:
+2018-06-18-main-INFO -root      :Record Found Successfully
+2018-06-18-main-ERROR-root      :ORA-08002: sequence RECHID.CURRVAL is not yet defined in this session
+
+2018-06-18-main-INFO -root      :Reacharge details added successfully:
+2018-06-18-main-ERROR-root      :ORA-08002: sequence RECHID.CURRVAL is not yet defined in this session
+
+2018-06-18-main-INFO -root      :Reacharge details added successfully:
+2018-06-18-main-ERROR-root      :ORA-08002: sequence RECHID.CURRVAL is not yet defined in this session
+
+2018-06-18-main-INFO -root      :Reacharge details added successfully:
+2018-06-18-main-ERROR-root      :ORA-08002: sequence RECHID.CURRVAL is not yet defined in this session
+
+2018-06-18-main-INFO -root      :Reacharge details added successfully:
+2018-06-18-main-ERROR-root      :ORA-08002: sequence RECHID.CURRVAL is not yet defined in this session
+
+2018-06-18-main-INFO -root      :Reacharge details added successfully:
+2018-06-18-main-INFO -root      :Record Not Found
+2018-06-18-main-INFO -root      :Record Found Successfully
+2018-06-18-main-INFO -root      :Record Not Found
+2018-06-18-main-INFO -root      :Record Found Successfully
