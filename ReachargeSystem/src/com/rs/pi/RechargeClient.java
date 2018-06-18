@@ -32,10 +32,10 @@ public class RechargeClient {
 	public static void main(String[] args) throws RechargeSystemException {
 		// TODO Auto-generated method stub
 		scanner = new Scanner(System.in);
-		System.out.println("Recharge System\n****************\nChoose one of the option\n1.Recharge Mobile\n2.View Recharge History\n3.Exit");
-		int choice = scanner.nextInt();
 		String str=null;
 		do{
+			System.out.println("Recharge System\n****************\nChoose one of the option\n1.Recharge Mobile\n2.View Recharge History\n3.Exit");
+			int choice = scanner.nextInt();
 			switch (choice) {
 			case 1:{
 				getCustomerDetails();
@@ -111,4 +111,7 @@ public class RechargeClient {
 		}
 
 	}
+
+
+
 }
