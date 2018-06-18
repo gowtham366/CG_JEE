@@ -54,10 +54,11 @@ public class RechargeClient {
 			System.out.println("Continue again? Y/N");
 			str = scanner.next();
 		}while(str.equalsIgnoreCase("Y"));
-		
 
 	}
 
+
+	//Search Recharge History
 	private static void searchReachargeHistory() throws RechargeSystemException{
 		// TODO Auto-generated method stub
 		do{
@@ -73,6 +74,7 @@ public class RechargeClient {
 		}
 	}
 
+	//Get customer details from user
 	private static void getCustomerDetails() throws RechargeSystemException {
 		// TODO Auto-generated method stub
 		CustomerBean bean= new CustomerBean();
@@ -103,15 +105,11 @@ public class RechargeClient {
 			}while(!iRechargeService.isValidPlan(planName));
 			bean.setPlanName(planName);
 			bean.setCustAmount(iRechargeService.getPlanAmount());
-//			System.err.println(bean.getCustAmount());
+			//			System.err.println(bean.getCustAmount());
 			System.out.println(iRechargeService.addCustomerDetails(bean));		
 		} catch (RechargeSystemException e) {
 			// TODO Auto-generated catch block
 			throw new RechargeSystemException(e.getMessage());
 		}
-
 	}
-
-
-
 }
