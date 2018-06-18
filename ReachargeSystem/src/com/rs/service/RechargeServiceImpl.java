@@ -1,6 +1,7 @@
 package com.rs.service;
 
 import java.util.ArrayList;
+
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -14,8 +15,12 @@ import com.rs.dao.IRechargeDAO;
 import com.rs.dao.RechargeDAOImpl;
 import com.rs.exception.RechargeSystemException;
 
+/**
+ * @author gowthc
+ *
+ */
 public class RechargeServiceImpl implements IRechargeService {
-	
+
 	IRechargeDAO iRechargeDAO;
 	Logger logger=Logger.getRootLogger();
 	CustomerBean bean = new CustomerBean();
@@ -24,9 +29,9 @@ public class RechargeServiceImpl implements IRechargeService {
 		// TODO Auto-generated constructor stub
 		PropertyConfigurator.configure("resources//log4j.properties");
 	}
-	
+
 	//adding customet to database calls dao method addCustomerDetails(CustomerBean bean)
-	
+
 	@Override
 	public String addCustomerDetails(CustomerBean bean)
 			throws RechargeSystemException {
@@ -58,7 +63,7 @@ public class RechargeServiceImpl implements IRechargeService {
 		planList = iRechargeDAO.retrivePlanDetails();
 		return planList;
 	}
-	
+
 
 	@Override
 	public boolean isValidName(String custName){
@@ -69,7 +74,7 @@ public class RechargeServiceImpl implements IRechargeService {
 			System.err.println("Enter the valid name");
 		return result;
 	}
-		
+
 	@Override
 	public boolean isValidEmail(String email){
 		Pattern emailPattern = Pattern.compile("^[\\w.%+-]+@[\\w.-]+\\.[A-Za-z]{2,6}$");
@@ -91,7 +96,7 @@ public class RechargeServiceImpl implements IRechargeService {
 			System.err.println("Enter the valid mobile number");
 		return result;
 	}
-	
+
 	@Override
 	public boolean isValidPlan(String plan){
 		// TODO Auto-generated method stub
@@ -104,7 +109,7 @@ public class RechargeServiceImpl implements IRechargeService {
 					if(list.getPlanName().equalsIgnoreCase(plan)){
 						result=true;
 						custAmount=list.getPlanAmount();
-					//	bean.setCustAmount(list.getPlanAmount());
+						//	bean.setCustAmount(list.getPlanAmount());
 						break;
 					}
 				}
@@ -112,7 +117,7 @@ public class RechargeServiceImpl implements IRechargeService {
 					System.err.println("Enter the valid plan name");	
 				}
 			}			
-			
+
 		} catch (RechargeSystemException e) {
 			// TODO Auto-generated catch block
 			logger.error(e.getMessage());
