@@ -9,7 +9,7 @@
  (
  rechId NUMBER(5) PRIMARY KEY,
  name VARCHAR2(20),
- email VARCHAR2(20),
+ email VARCHAR2(50),
  mobile NUMBER(10),
  status VARCHAR2(10),
  plan_name VARCHAR2(8),
