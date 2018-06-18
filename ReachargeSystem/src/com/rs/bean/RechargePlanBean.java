@@ -7,7 +7,7 @@ package com.rs.bean;
 public class RechargePlanBean {
 	private String planName;
 	private int planAmount;
-	
+
 	public String getPlanName() {
 		return planName;
 	}
