@@ -11,8 +11,8 @@ public class CustomerBean {
 	private String custEmail;
 	private static String custStatus = "Success";
 	private int custAmount;
-	
-	
+
+
 	public int getCustAmount() {
 		return custAmount;
 	}
@@ -49,8 +49,8 @@ public class CustomerBean {
 	public void setCustEmail(String custEmail) {
 		this.custEmail = custEmail;
 	}
-@Override
-public String toString(){
-	return "Customer Name : "+this.custName+"\nMobile Number : "+this.custMobile+"\nPlan Name : "+this.planName+"\nAmount : "+this.custAmount;
-}
+	@Override
+	public String toString(){
+		return "Customer Name : "+this.custName+"\nMobile Number : "+this.custMobile+"\nPlan Name : "+this.planName+"\nAmount : "+this.custAmount;
+	}
 }
