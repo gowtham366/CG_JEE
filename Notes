@@ -36,7 +36,7 @@ public class Program1 {
 
 Primitive data type
 ********************
-	Integer -  0
+Integer -  0
 	byte - 1 byte
 	short - 2 bytes
 	int - 4 bytes
@@ -57,7 +57,7 @@ Variable
 
 Global - instance & static (Heap memory)
 Local - Stack
-Reference - 
+Reference - Heap
 
 
 String + any = String
@@ -183,7 +183,7 @@ Object :  By default any java prgrm we write the base will java.lang.Object
 	-toString()
 	-wait, notify, notifyAll()
 
-Every Java program will have default class c
+Every Java program will have default class as java.lang.Object
 	
 $$$$$$$$$$$
 Day 4
@@ -197,8 +197,6 @@ Object class
 Constructor Invocation
 -------------------------
  -super() is defined in the 
- 
- 
  
  By using constructor assign the value/assign using sub class constructor
 
@@ -240,9 +238,9 @@ Polymorphism - Many forms
 		
 	
 	Overriding happens btw Parent & child class
-	Overloading always happens btw the same class -arg list()
+	Overloading always happens btw the same class -arg list(), methods, constructors
 		
-	for(:) -> Will throw the null pointer exception if null value is passed
+	for(:null) -> Will throw the null pointer exception if null value is passed
 	
 final variable
 ****************
@@ -269,6 +267,8 @@ Interface static method & default can have method defination from java 8
 	-Method is always abstract --> public abstract void display();
 	- Any abstract method in the interface must be override in the class which is implementing interface
 	- interface cannot be instantiated(cannot create the object)
+	
+	
 	
 $$$$$$$$$$
 Day 5
@@ -382,7 +382,7 @@ Collection framework: Data structure
 	subclass of T are allowed.
 	
 	
-Exception:
+Exception: -Run time --> normal flow will be affected
 ***********
 
 Program :
@@ -391,9 +391,26 @@ Program :
 		-Error
 		
 		-Exception
-			1.Checked
-			2.Unchecked
-
+			1.Checked - prgrmr
+				-ClassNotFoundException
+			2.Unchecked 
+			
+			Throwable -> Exception -> RuntimeException - Unchecked Exception
+										NullPointer,ArrayIndexOutofBounds,ClassCastException
+										
+			try(Resource obj created){
+			}
+			catch(){//subclass --> base class  i.e)FileNotFound ->IOException ->Exception
+			}
+			finally{
+			}
+			
+			throws
+			
+	Resource -> Any obj has close() will be called as resource
+	
+			
+			
 Layered Arch:
 *************
 	Presentation - Presentation code --Main
@@ -415,4 +432,101 @@ Layered Arch:
 	com.emp.test - junit test case
 	
 	resources - log4j.prop, jdbc.prop
-	lib - ojdbc.jar, log4j.jar, etc
+	lib -
+	
+	
+	
+$$$$$$$$$$$$
+Day 7
+$$$$$$$$$$$$
+
+Logger  --> used as a support in debugging programs
+*******
+			need to add jar file to build path
+			
+	Types :
+	-Logger log = Logger.getLogger(LoggerExample.class);
+	-Root logger
+	-Named logger
+	-static logger
+	
+	3 Components
+	
+		1.logger
+		2.layout
+		3.Appender
+		
+	Logger
+	Appender : File,console,RollingFile,dailyrollingFile
+	layout - simple,html
+	
+	5 priority levels :
+		DIWEF
+		Debug,Info,Warning,Error,Fatal
+		
+		
+	Regular expression: -QuickRex
+	********************
+		- Extracting a string or replacing & validation
+		
+		java.util.regex.*;
+		
+			-Pattern
+			-Matcher
+			-PattenSyntaxException
+		
+		String pt = "f.r";
+		Pattern patObj = Pattern.compile(pt);
+		String content = "gtadnlas";
+		Matcher matObj = patObj.matcher(content);
+		matObj.find() --> true / false
+			matObj.group()
+		.
+		+
+		* - greedy principle
+		? - least possible match
+		{n}
+		^ -> not
+		$
+		(group) (for){2}
+		[]
+		[^]
+		[|]
+		[&& | !]
+		\\w or \\W
+		\\d --> [0-9] or \\D
+		
+		
+		
+	Driver -> 1(Research)-JDBC ODBC
+		2 - Native API (c & C++)
+		3 - Java N/W Protocol Driver (JDBC Middleware)
+		4 - thin driver(created purely developed using java)
+			2,3 ->JDBC ODBC
+		
+
+			Steps for connecting JDBC 4.0 -java 8
+			import pkg -> java.sql
+			//befor 4.0
+			Class.forName(Driver); ->Handle CNF exception
+			load/register driver -> add jar file to lib and add to build path
+			
+			
+			
+			Statement -> Static, can also support dynamic qrs but, query will be compiled every time
+			PreparedStatement - Avoid SQL Injection
+			CallableStatement - 
+			//LoggableStatement
+			
+			
+			
+			
+			DML - IUDM - explicit commit - boolean/int ->executeUpdate();
+			DDL - CATDRC - boolean - execute();
+			DQL - Select - table(R/C) ->ResultSet - executeQuery();
+			
+			Any Query ->execute();
+			
+			
+			Table o/p:
+			By default 
